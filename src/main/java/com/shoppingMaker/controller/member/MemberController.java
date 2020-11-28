@@ -41,7 +41,6 @@ public class MemberController {
 		}
 		
 		memberService.createNewMember(form);
-		
 		return "redirect:/";
 	}
 	

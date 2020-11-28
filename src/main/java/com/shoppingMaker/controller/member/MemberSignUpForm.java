@@ -13,7 +13,7 @@ public class MemberSignUpForm {
 
 	@NotBlank
 	@Length(min = 3, max = 15)
-	@Pattern(regexp = "^{a-zA-Z0-9-_}[3,15]$")
+	//@Pattern(regexp = "^{a-zA-Z0-9}[3,15]$")
 	private String userId;
 	
 	@NotBlank
@@ -30,7 +30,7 @@ public class MemberSignUpForm {
 	
 	@NotBlank
 	@Length(min = 3, max = 10)
-	@Pattern(regexp = "^{가-힣a-zA-Z}[3,15]$")
+	//@Pattern(regexp = "^{가-힣a-zA-Z}[3,10]$")
 	private String username;
 
 
