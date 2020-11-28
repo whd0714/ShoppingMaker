@@ -1,5 +1,7 @@
 package com.shoppingMaker.domain;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,8 +28,7 @@ public class Member {
 	@Column(name = "member_id")
 	private String id;
 	
-	@Column(name = "m_id")
-	private String mId;
+	private String userId;
 	
 	private String password;
 	
@@ -35,5 +36,10 @@ public class Member {
 	
 	private String userName;
 	
+	private LocalDateTime joinAt;
+	
+	public void settingNewMemberData() {
+		this.joinAt = LocalDateTime.now();
+	}
 	
 }

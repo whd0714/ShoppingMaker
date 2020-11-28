@@ -6,7 +6,7 @@ import com.shoppingMaker.domain.Member;
 
 public interface MemberRepository extends JpaRepository<Member, Long>{
 
-	boolean existsByMId(String mId);
+	boolean existsByUserId(String userId);
 	
 	boolean existsByEmail(String email);
 	

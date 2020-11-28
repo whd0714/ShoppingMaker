@@ -32,7 +32,7 @@ public class MemberSignUpFormValidator implements Validator {
 		// TODO Auto-generated method stub
 		MemberSignUpForm signUpForm = (MemberSignUpForm)target;
 		
-		if(repository.existsByMId(signUpForm.getMId())) {
+		if(repository.existsByUserId(signUpForm.getUserId())) {
 			errors.rejectValue("mId","error.mId","이미 사용중인 아이디입니다.");
 		}
 		if(repository.existsByEmail(signUpForm.getEmail())) {
