@@ -13,9 +13,7 @@ import javax.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -26,7 +24,6 @@ import com.shoppingMaker.domain.Member;
 import com.shoppingMaker.repository.MemberRepository;
 import com.shoppingMaker.service.MemberService;
 
-import lombok.RequiredArgsConstructor;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -43,7 +40,8 @@ class MemberControllerTest {
 	MockMvc mockMvc;
 
 	
-	  @Test public void 유저가입() {
+	  @Test 
+	  public void 유저가입() {
 	  
 	  MemberSignUpForm form = new MemberSignUpForm(); form.setUserId("member1");
 	  form.setPassword("123456789"); form.setPasswordConfirm("123456789");
@@ -64,7 +62,7 @@ class MemberControllerTest {
 				.param("password", "123456789")
 				.param("passwordConfirm","123456789")
 				.param("email","member1@naver.com")
-				.param("username","회원1")
+				.param("username","일번남")
 				.contentType(MediaType.APPLICATION_JSON)
 				.with(csrf())
 				)
