@@ -33,7 +33,7 @@ public class MemberSignUpFormValidator implements Validator {
 		MemberSignUpForm signUpForm = (MemberSignUpForm)target;
 		
 		if(repository.existsByUserId(signUpForm.getUserId())) {
-			errors.rejectValue("mId","error.mId","이미 사용중인 아이디입니다.");
+			errors.rejectValue("userId","error.userId","이미 사용중인 아이디입니다.");
 		}
 		if(repository.existsByEmail(signUpForm.getEmail())) {
 			errors.rejectValue("email","error.email","이미 사용중인 이메일입니다.");

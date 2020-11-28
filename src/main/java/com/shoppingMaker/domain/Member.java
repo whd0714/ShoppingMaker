@@ -26,15 +26,17 @@ public class Member {
 	@Id
 	@GeneratedValue
 	@Column(name = "member_id")
-	private String id;
+	private Long id;
 	
+	@Column(unique = true)
 	private String userId;
 	
 	private String password;
 	
+	@Column(unique = true)
 	private String email;
 	
-	private String userName;
+	private String username;
 	
 	private LocalDateTime joinAt;
 	

@@ -30,7 +30,7 @@ public class MemberService {
 				.userId(form.getUserId())
 				.password(password)
 				.email(form.getEmail())
-				.userName(form.getUsername())
+				.username(form.getUsername())
 				.build();
 		
 		member.settingNewMemberData();
